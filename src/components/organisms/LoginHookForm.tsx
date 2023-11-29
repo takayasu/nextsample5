@@ -1,4 +1,4 @@
-import { type } from "os";
+
 import { useForm } from "react-hook-form";
 
 export type Login = {
