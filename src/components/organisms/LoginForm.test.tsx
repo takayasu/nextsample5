@@ -26,15 +26,6 @@ describe('LoginForm', () => {
         expect(onLogin).toHaveBeenCalled();
     });
 
-    test('ボタンを押すとonLoginが呼ばれる', () => {
-        const onLogin = jest.fn();
-        const props: LoginProps = { onLogin };
-        const result: RenderResult = render(<LoginForm {...props} />);
-        const button = result.getByRole('button', {name: 'Login'});
-        button.click();
-        expect(onLogin).toHaveBeenCalled();
-    });
-
     test('入力したログイン情報が取得できる', async () => {
         const onLogin = jest.fn();
         const props: LoginProps = { onLogin };
